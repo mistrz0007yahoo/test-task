@@ -1,11 +1,15 @@
 {
   "name": "back-end",
   "version": "1.0.0",
-  "description": "",
+  "description": "test staff",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "baginski",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }

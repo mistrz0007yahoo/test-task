@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-content>
+    <mat-form-field>
+      <mat-label>chose file</mat-label>
+      <mat-select (selectionChange)="fileSelection$.next($event)">
+        @for (file of files; track file) {
+        <mat-option [value]="file">{{ file }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>chose table</mat-label>
+      <mat-select (selectionChange)="tableSelection$.next($event)">
+        @for (table of tables; track table) {
+        <mat-option [value]="table">{{ table }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    <app-details [details]="details" />
+  </mat-card-content>
+</mat-card>
